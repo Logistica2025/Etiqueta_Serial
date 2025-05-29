@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generador de Etiquetas Seriales</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generar Etiquetas con Serial y Código de Barras</h1>
+        
+        <form id="form-serial">
+            <label for="material">Material:</label>
+            <input type="text" id="material" name="material" required />
+
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" required />
+
+            <label for="um">Unidad de Medida (UM):</label>
+            <input type="text" id="um" name="um" required />
+
+            <label for="serial">Serial:</label>
+            <input type="text" id="serial" name="serial" required />
+
+            <button type="submit">Guardar y Generar Código</button>
+        </form>
+
+        <div id="codigo-barra-container" style="margin-top: 20px;">
+            <svg id="barcode"></svg>
+        </div>
+
+        <div id="mensaje"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
